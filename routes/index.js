@@ -12,7 +12,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/profile', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
+  //res.send(JSON.stringify(req.oidc.user));
+  res.render('profile', { 
+        title: "Profile Page",
+        isAuthenticated: req.oidc.isAuthenticated(),
+        user: req.oidc.user,
+    });
 });
 
 module.exports = router;

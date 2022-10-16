@@ -8,17 +8,7 @@
   </head>
   <body style="word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class="">
 
-    <div class="nav-bar">
-      <nav>
-        <ul>
-          <% if(!isAuthenticated) { %>
-          <li><a href="/login/">Login</a></li>
-          <% } else { %>
-          <li><a href="/logout/">Logout</a></li>
-          <% } %>
-        </ul>
-      </nav>
-    </div>
+    <%- include('partials/nav') %>
 
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
