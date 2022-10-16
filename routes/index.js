@@ -1,4 +1,5 @@
 const express = require('express');
+const { requiresAuth } = require('express-openid-connect');
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -8,6 +9,10 @@ router.get('/', (req, res) => {
         isAuthenticated: req.oidc.isAuthenticated(),
         user: req.oidc.user,
     });
+});
+
+router.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
 
 module.exports = router;
