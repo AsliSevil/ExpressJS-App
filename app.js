@@ -17,6 +17,8 @@ const config = {
 
 var app = express();
 
+let encodeUrl = bodyParser.urlencoded({ extended: false })
+
 app.set("views", "views");
 app.set("view engine", "ejs");
 app.use(express.json());
