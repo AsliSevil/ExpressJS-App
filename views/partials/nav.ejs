@@ -1,10 +1,13 @@
 <div class="nav-bar">
   <nav>
     <ul>
+      <li><a href="/">Home</a></li>
       <% if(!isAuthenticated) { %>
       <li><a href="/login/">Login</a></li>
       <% } else { %>
       <li><a href="/logout/">Logout</a></li>
+      <li><a href="/profile">Profile</a></li>
+      <li><a href="/update">Update</a></li>
       <% } %>
     </ul>
   </nav>

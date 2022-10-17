@@ -16,8 +16,11 @@
     <% if(user) { %>
         <div class="profileInfo">
             <img src="<%= user.picture %>"/>
-            <p class="name">
-                <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %>
+            <p class="firstname">
+                First Name: <%= results.firstname %>
+            </p>
+            <p class="lastname">
+                Last Name: <%= results.lastname %>
             </p>
         </div>
     <% } %>
